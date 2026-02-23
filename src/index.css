@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'SamsungSharpSans';
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+  src:
+    local('SamsungSharpSans'),
+    url('/fonts/SamsungSharpSansBd.woff2') format('woff2'),
+    url('/fonts/SamsungSharpSansBd.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'SamsungSharpSansMd';
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+  src:
+    local('SamsungSharpSans'),
+    url('/fonts/SamsungSharpSansMd.woff2') format('woff2'),
+    url('/fonts/SamsungSharpSansMd.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'SamsungOne';
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+  src:
+    url('/fonts/SamsungOne-400.woff2') format('woff2'),
+    url('/fonts/SamsungOne-400.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'SamsungOne';
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+  src:
+    url('/fonts/SamsungOne-700.woff2') format('woff2'),
+    url('/fonts/SamsungOne-700.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'SamsungOneKorean';
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+  src:
+    url('/fonts/SamsungOneKorean-400.woff2') format('woff2'),
+    url('/fonts/SamsungOneKorean-400.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'SamsungOneKorean';
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+  src:
+    url('/fonts/SamsungOneKorean-700.woff2') format('woff2'),
+    url('/fonts/SamsungOneKorean-700.woff') format('woff');
+}
+
+@layer base {
+  body {
+    @apply bg-background text-text;
+    font-family: 'SamsungOne', 'SamsungSharpSans', 'arial', 'sans-serif';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  #root {
+    @apply w-full h-screen overflow-hidden;
+  }
+}
+
+@layer components {
+  .ff-sans {
+    font-family: 'SamsungSharpSans', 'SamsungOne', 'arial', 'sans-serif';
+  }
+
+  .ff-sans-md {
+    font-family: 'SamsungSharpSansMd', 'SamsungOne', 'arial', 'sans-serif';
+  }
+
+  .slide-text-box {
+    @apply space-y-[.83vw];
+  }
+
+  .slide-title {
+    @apply ff-sans-md whitespace-pre-line text-[1.66vw] font-bold;
+  }
+
+  .slide-desc {
+    @apply break-words text-[.83vw];
+  }
+
+  .slide-img {
+    @apply object-cover w-full shadow-vw-drop;
+  }
+
+  .slide-pagination-box {
+    @apply flex gap-[1.25vw];
+  }
+
+  .slide-pagination-img {
+    @apply w-full;
+  }
+
+  .shadow-vw-drop {
+    box-shadow: 0 0.208vw 2.083vw rgba(0, 0, 0, 0.1);
+  }
+}
